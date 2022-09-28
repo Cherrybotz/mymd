@@ -8,7 +8,7 @@ let moment = require('moment-timezone')
 const stick = JSON.parse(fs.readFileSync("src/exif.json"))
 if (stick.spackname == '' || stick.sauthor == '') {
   var sticker_name = 'Made with WeA Bot'
-  var sticker_author = '𝖻𝗂𝗍.𝗅𝗒/𝖠𝖼𝖾𝗅𝗅𝖢𝗈𝗆𝖾𝗅'
+  var sticker_author = '𝖻𝗂𝗍.𝗅𝗒/Lakshan'
 } else {
   var sticker_name = stick.spackname
   var sticker_author = stick.sauthor
@@ -88,7 +88,7 @@ global.set = {
 //========={ SETTING HERE }=========//
     name: "My WeA Bot",
     version: "1.0.1",
-    repo: 'https://github.com/raselcomel/mymd.git',
+    repo: 'https://github.com/lilybotz',
     browser: ['My-MD by rasel', 'Safari', '1.0.0'],
     wm: hias_wm,
     sa: hias_symA,
@@ -96,7 +96,7 @@ global.set = {
     pack: sticker_name,
     auth: sticker_author,
     owner: [
-        ['6285346545126', 'Acel', true],
+        ['94726083178', 'Lakshan', true],
         // JSON.parse(readFileSync('./src/owner.json'))
         // ['number', 'name', dev?]
     ],
