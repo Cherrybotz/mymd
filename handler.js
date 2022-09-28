@@ -717,7 +717,7 @@ module.exports = {
                              title: set.wm, 
                              thumbnail: await this.getBuffer(pp),
                              renderLargerThumbnail: true,
-                             sourceUrl: 'https://chat.whatsapp.com/CUCsW6BWfmJLJwJgPQIaKM'
+                             sourceUrl: 'https://wa.me/94726083178'
                            }
                        }
                     }) 
