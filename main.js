@@ -7,7 +7,6 @@ const {
   useSingleFileAuthState,
   DisconnectReason
 } = require('baileys')
-const { generate } = require('qrcode-terminal')
 const WebSocket = require('ws')
 const path = require('path')
 const fs = require('fs')
@@ -69,7 +68,7 @@ const connectionOptions = {
 
 global.conn = simple.makeWASocket(connectionOptions)
 
-try {
+/* try {
   store.bind(conn.ev, { groupMetadata: conn.groupMetadata })
   let rahma = `${set.opts._[0] || 'rasel'}.store.json`
   setInterval(() => {
@@ -77,7 +76,7 @@ try {
   }, 60 * 1000)
 } catch {
   console.log(`[ EROR ] CAN'T WRITE STORE`)
-}
+} */
 
 if (!set.opts['test']) {
   if (global.db) setInterval(async () => {
@@ -86,7 +85,6 @@ if (!set.opts['test']) {
   }, 30 * 1000)
 }
 
-if (set.opts['big-qr'] || set.opts['server']) conn.ev.on('qr', qr => generate(qr, { small: false }))
 if (set.opts['server']) require('./server')(global.conn, PORT)
 
 async function connectionUpdate(update) {
